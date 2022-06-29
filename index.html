@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listing</title>
+    <script
+      src="https://kit.fontawesome.com/0b420d7436.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="landing">
+      <div>
+        <h1 class="title">Welcome to CardFinder</h1>
+        <p class="subtitle">A database for yu gi oh cards</p>
+      </div>
+    </section>
+    <section id="properties">
+      <div class="filter">
+        <ul class="panes">
+          <li class="pane-item active">All</li>
+          <li class="pane-item">Monster</li>
+          <li class="pane-item">Spell</li>
+          <li class="pane-item">Trap</li>
+        </ul>
+        <div class="filter-container">
+          <form method="post"></form>
+        </div>
+      </div>
+      <h2 class="properties-title">Current Cards</h2>
+      <div id="container"></div>
+    </section>
+    <section id="footer">
+      <footer>
+        <h2>Want us to add more cards? Send suggestions to us here.</h2>
+        <!-- <div class="footerA">
+          <form action="post" class="contactA">
+            <input type="text" name="name" id="name" placeholder="Name" />
+            <input
+              type="text"
+              name="surnname"
+              id="surnname"
+              placeholder="Surname"
+            />
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Phone Number"
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email here"
+            />
+          </form>
+          <form class="contactB">
+            <textarea
+              name="suggest"
+              id="suggest"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </form>
+        </div> -->
+        <div class="footerB">
+          <div class="name">
+            <p>
+              <i class="fa-solid fa-copyright"></i> CardFinder - All Rights
+              Reserved
+            </p>
+          </div>
+          <div class="company">
+            <p class="companyName">CardFinder</p>
+          </div>
+          <div class="icons">
+            <a
+              href="https://www.linkedin.com/in/mika-rinquest-975890237/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="https://codepen.io/mikarinquest" target="_blank"
+              ><i class="fa-brands fa-codepen"></i
+            ></a>
+            <a href="https://github.com/MikaRinquest" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>

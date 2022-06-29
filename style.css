@@ -1,0 +1,172 @@
+/* Entire HTML */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  min-height: 100vh;
+}
+
+/* Landing */
+
+#landing {
+  background-image: url("./Pictures/682525.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 30px;
+  color: blueviolet;
+}
+
+.subtitle {
+  font-size: 25px;
+  color: white;
+}
+
+/* Filter */
+.filter {
+  display: flex;
+  flex-direction: column;
+  margin-top: -110px;
+}
+
+.panes {
+  display: flex;
+  justify-content: center;
+}
+
+.pane-item {
+  color: white;
+  background-color: rgb(80, 159, 244, 0.6);
+  list-style: none;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-radius: 5px 5px 0px 0px;
+  margin: 0px 1px 0px 1px;
+  padding: 15px;
+}
+
+.pane-item:active {
+  color: black;
+  background-color: #e4dddd;
+}
+
+.filter-container {
+  height: 100px;
+  width: 50%;
+  align-self: center;
+  border-radius: 10px;
+  background: #e4dddd;
+}
+
+.properties-title {
+  text-align: center;
+  padding-top: 50px;
+}
+
+/* Hover Effect */
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 200px;
+}
+
+.list-item {
+  position: relative;
+  width: 25%;
+}
+
+.list-info {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  color: white;
+  position: absolute;
+  width: 150px;
+  height: 250px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  opacity: 1;
+  transition: all 0.1s linear;
+}
+
+.list-item:hover > img {
+  width: 175px;
+  height: 275px;
+  transition: all 0s linear;
+}
+
+.list-item:hover .list-info {
+  opacity: 0;
+}
+
+.sword {
+  font-size: 15px;
+}
+
+.sword > img {
+  width: 15px;
+  aspect-ratio: 1;
+}
+
+/* Footer */
+footer > h2 {
+  text-align: center;
+}
+
+.footerA {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerB {
+  display: flex;
+  justify-content: center;
+  background-color: #db3333;
+}
+
+.name {
+  width: 30%;
+}
+
+.company {
+  width: 30%;
+}
+
+.companyName {
+  text-align: center;
+}
+
+.icons {
+  text-align: end;
+  width: 30%;
+}
+
+.fa-brands,
+.fab {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+  color: black;
+}
