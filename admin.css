@@ -1,0 +1,23 @@
+/* css Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Table */
+table {
+  width: 100%;
+  /* border: 1px solid black; */
+}
+tr {
+  width: 100%;
+}
+
+th {
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid black;
+}

@@ -39,6 +39,7 @@ section {
 .panes {
   display: flex;
   justify-content: center;
+  margin-bottom: 0;
 }
 
 .pane-item {
@@ -61,14 +62,36 @@ section {
 .filter-container {
   height: 100px;
   width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   align-self: center;
   border-radius: 10px;
   background: #e4dddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
 }
 
 .properties-title {
   text-align: center;
   padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.form {
+  padding-top: 15px;
+  align-items: center;
+}
+
+#sort {
+  font-size: 18px;
+}
+
+.sort-button {
+  font-size: 18px;
 }
 
 /* Hover Effect */
@@ -82,6 +105,7 @@ section {
 .list-item {
   position: relative;
   width: 25%;
+  padding-bottom: 15px;
 }
 
 .list-info {
@@ -104,6 +128,7 @@ section {
   align-items: flex-end;
   opacity: 1;
   transition: all 0.1s linear;
+  backdrop-filter: blur(0.6px);
 }
 
 .list-item:hover > img {

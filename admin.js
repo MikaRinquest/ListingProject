@@ -1,5 +1,3 @@
-// Filter
-
 // Properties Array
 const cards = JSON.parse(localStorage.getItem("cards"))
   ? JSON.parse(localStorage.getItem("cards"))
@@ -42,7 +40,7 @@ const cards = JSON.parse(localStorage.getItem("cards"))
         Desc: "2 Level 1 Warrior monster. The first time each Warrior monster you control would be destroyed by battle or card effect each turn, it is not destroyed. You can only use each of the following effects of Heroic Champion - Jarngreipr once per turn. You can detach 2 materials from this card, then target 1 Level/Rank 4 Warrior monster in your GY; Special Summon it, and if you do, this card gains ATK equal to that monster's original ATK. When an attack is declared involving an opponent's monster: You can gain LP equal to half its ATK.",
         Type: "Effect",
         Image: "https://ygoprodeck.com/pics/23848752.jpg",
-        Rarity: "N",
+        Rarity: "C",
       },
       {
         id: 5,
@@ -112,7 +110,7 @@ const cards = JSON.parse(localStorage.getItem("cards"))
         Desc: "These walls form a labyrinth with no exit for enemies..",
         Type: "Normal",
         Image: "https://ygoprodeck.com/pics/67284908.jpg",
-        Rarity: "N",
+        Rarity: "C",
       },
       {
         id: 12,
@@ -126,81 +124,23 @@ const cards = JSON.parse(localStorage.getItem("cards"))
       },
     ];
 
-// Looping Array
 function showItems(cards) {
   document.querySelector("#container").innerHTML = "";
   cards.forEach((card) => {
     console.log(card);
     document.querySelector("#container").innerHTML += `   
-    <div class="list-item">
-    <img src="${card.Image}" width="150" height="250">
-    <div class="list-info">
-    <span class="sword">
-        <p>ATK:${card.ATK}</p>
-        <p>DEF:${card.DEF}</p>
-        <p>Rarity:${card.Rarity}</p>
-    </span>
-        </div>
-      </div>
+    <tr>
+      <td>${card.id}</td>
+      <td><img src="${card.Image}" width="50px" height="50px"></td>
+      <td>${card.CardName}</td>
+      <td>${card.ATK}</td>
+      <td>${card.DEF}</td>
+      <td>${card.Desc}</td>
+      <td>${card.Type}</td>
+      <td>${card.Rarity}</td>
+      <td><i class="fa-solid fa-trash-can"></i></td>
+      </tr>
         `;
   });
 }
-
-// Show array in HTML
 showItems(cards);
-
-// Add to local storage function
-// function addToStorage(cards) {
-//   localStorage.setItem("cards  ", JSON.stringify(cards));
-// }
-
-// Filter functions
-
-// Display All filter
-document.querySelector("#filter-all").addEventListener("click", displayAll);
-
-function displayAll() {
-  showItems(cards); //Displays the array
-}
-
-// Display Effects filter
-document.querySelector("#filter-eff").addEventListener("click", displayEff); //DON'T ADD BRACKETS INSIDE OF EVENT LISTENER
-
-function displayEff() {
-  //Tells the computer where to look for the keyword
-  const foundEffect = cards.filter((card) => {
-    return card.Type === "Effect"; //Returns all objects with the word "Effect" in the Type key
-  });
-  console.log(foundEffect);
-  showItems(foundEffect); //Displays the array
-}
-
-// // // Display Normal filter
-document.querySelector("#filter-norm").addEventListener("click", displayNorm);
-
-function displayNorm(Type) {
-  const foundNormal = cards.filter((card) => {
-    return card.Type === "Normal";
-  });
-  showItems(foundNormal);
-}
-
-// Sort Functions
-
-// ID Ascending
-function idAsc() {
-  cards.sort((a, b) => {
-    if (a.id < b.id) return -1;
-    if (b.id > a.id) return 1;
-    return 0;
-  });
-}
-
-// ID Descending
-function idDesc() {
-  cards.sort((a, b) => {
-    if (b.id < a.id) return -1;
-    if (a.id > b.id) return 1;
-    return 0;
-  });
-}
