@@ -178,6 +178,9 @@ function add() {
   console.log(cards);
 }
 
+function openModal() {
+  document.getElementById("modal-container").style.display = "block";
+}
 
 // Close modal
 function closeModal() {
