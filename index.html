@@ -23,60 +23,74 @@
         <h1 class="title">Welcome to CardFinder</h1>
         <p class="subtitle">A database for yu gi oh cards</p>
       </div>
-      <button><a href="./admin.html">Hoi no Hoi</a></button>
     </section>
-    <section id="properties">
+    <section id="card-container">
       <div class="filter">
         <ul class="panes">
           <li class="pane-item active" id="filter-all">All</li>
           <li class="pane-item" id="filter-eff">Effect Monsters</li>
           <li class="pane-item" id="filter-norm">Normal Monsters</li>
+          <li class="pane-item" id="filter-main">Main Deck</li>
+          <li class="pane-item" id="filter-extra"> Extra Deck</li>
         </ul>
         <div class="filter-container">
-          <h4>Sort By:</h4>
-          <div class="buttons">
-            <button onclick="idAsc()">ID Ascending</button>
-            <button onclick="idDesc()">ID Descending</button>
+          <div class="info">
+            <div class="rating-system">
+              <h3>Rating system</h3>
+            </div>
+            <div class="rating-info">
+              <p>UR = Ultra Rare</p>
+              <p>SR = Super Rare</p>
+              <p>R = Rare</p>
+              <p>C = Common</p>
+            </div>
+          </div>
+          <div class="admin">
+            <button><a href="./admin.html">To Admin Page</a></button>
           </div>
         </div>
       </div>
-      <h2 class="properties-title">Current Cards</h2>
+      <h2 class="cards-title">Current Cards</h2>
       <div id="container"></div>
     </section>
     <section id="footer">
       <footer>
         <h2>Want us to add more cards? Send suggestions to us here.</h2>
-        <!-- <div class="footerA">
-          <form action="post" class="contactA">
+        <div class="footerA">
+          <form action="post" class="contactA" action="https://formspree.io/f/xrgjvnob">
             <input type="text" name="name" id="name" placeholder="Name" />
             <input
               type="text"
               name="surnname"
               id="surnname"
               placeholder="Surname"
+              required
             />
             <input
               type="tel"
               name="phone"
               id="phone"
               placeholder="Phone Number"
+              required
             />
             <input
               type="email"
               name="email"
               id="email"
-              placeholder="Enter your email here"
+              placeholder="Enter your email address here"
+              required
             />
-          </form>
-          <form class="contactB">
             <textarea
               name="suggest"
               id="suggest"
               cols="30"
               rows="10"
+              placeholder="Leave your suggestion or comments here"
+              required
             ></textarea>
+            <button type="submit">Submit</button>
           </form>
-        </div> -->
+        </div>
         <div class="footerB">
           <div class="name">
             <p>

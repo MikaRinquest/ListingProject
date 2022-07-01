@@ -13,8 +13,46 @@
   </head>
   <body>
     <section>
-      <div>
-        <a href="./index.html">Hoi no Hoi</a>
+      <div class="buttons">
+        <a href="./index.html">
+        <button class="index">
+            To Index
+          </button>
+        </a>
+        <button onclick="openMmodal()">Add new object</button>
+        <div id="modal-container">
+          <div id="modal-content">
+            <form onsubmit="event.preventDefault(); add()">
+              <input type="text" name="name" id="name" placeholder="Input Name" required>
+              <input type="number" name="atk" id="atk" placeholder="Input Attack Value" min="0" required>    
+              <input type="number" name="def" id="def" placeholder="Input Defense Value" min="0" required>    
+              <input type="text" name="Description" id="Description placeholder="Input Description" required>    
+              <select name="type" id="type">Type
+                <option value="Effect">Effect</option>
+                <option value="Normal">Normal</option>
+              </select>
+              <select name="deck" id="deck">Deck
+                <option value="Main">Main</option>
+                <option value="Extra">Extra</option>
+              </select>
+              <input type="text" name="image" id="image" placeholder="Input Image URL">
+              <select name="rarity" id="rarity">Rarity
+                <option value="UR">UR</option>
+                <option value="SR">SR</option>
+                <option value="R">R</option>
+                <option value="C">C</option>
+              </select>
+              <button type="submit" class="btn">Add product</button>
+              <button type="button" onclick="closeModal()" class="btn">Close</button>
+            </form>
+            <button type="button" onclick="closeModal()" class="btn">Close</button>
+          </div>
+        </div>
+        <ul>
+          <li class="displayAll">Display All Monsters</li>
+          <li class="displayEff">Display Effect Monsters</li>
+          <li class="displayNorm">Display Normal Monsters</li>
+        </ul>
       </div>
       <div>
         <table>
